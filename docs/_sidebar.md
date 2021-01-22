@@ -7,5 +7,6 @@
 * [泛型](/generic/generic.md)
 * [线程](/thread/thread.md)
 * [IO](/io/io.md)
-* [reflection](/reflection/reflection.md)
-
+* [反射](/reflection/reflection.md)
+* [算法](/algorithm/algorithm.md)
+* [面试](/interview/interview.md)

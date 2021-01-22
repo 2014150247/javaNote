@@ -2,11 +2,11 @@
 
 
 # javaNote
-> take it easy
+> easy come , easy go
 - `:)`
 
 
-![](https://img.shields.io/badge/version-v0.0.1-green.svg)   ![](https://img.shields.io/badge/author-Aphysia-yellow.svg)   ![](https://img.shields.io/badge/license-MIT-blue.svg)
+![](https://img.shields.io/badge/version-v0.0.1-green.svg)   ![](https://img.shields.io/badge/author-Frankie-yellow.svg)   ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
 <span id="busuanzi_container_site_pv" style="display: inline;">
