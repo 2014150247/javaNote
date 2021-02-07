@@ -45,6 +45,9 @@ volatile只能保证有序性和可见性。性能好，不是锁所以不存在
 他无法禁止指令重排，但是因为保证了单线程，所以保证了有序性。
 ## static
 线程共享的，所以线程不安全
+### static class 和 non static class：
+static，只能访问外部类的静态成员，不能访问外部类的非静态成员。
+non static，能访问外部类的静态和非静态成员。能访问外部类的数据和方法。
 
 
 
@@ -67,9 +70,7 @@ try里如果有return，finally还是会执行（而且会先return finally的�
 Throwable是最大的类。分为Error和Exception（Checked Exception 和 RuntimeException）
 
 
-# 堆内存溢出OOM 和 栈溢出 StackOverFlow
-除了程序计数器，其他都有可能OOM。
-SOF一般是死循环和大量的递归。全局变量过多，数组，list，map数据过大。
+
 
 
 
@@ -80,9 +81,7 @@ Interface,只能有成员常量，默认public static final，和方法得声明
 abstract抽象类可以有成员变量，声明普通方法和抽象方法。至少包含一个抽象方法就叫抽象类。
 
 
-# static class 和 non static class：
-static，只能访问外部类的静态成员，不能访问外部类的非静态成员。
-non static，能访问外部类的静态和非静态成员。能访问外部类的数据和方法。
+
 
 # for 和 for each：
 数组结构用for，因为用下表，内存连续比较方便。
@@ -100,5 +99,9 @@ non static，能访问外部类的静态和非静态成员。能访问外部类�
 ![](../pic/Image14.png)
 ## 检查闰年
 ![](../pic/Image15.png)
+
+
+# 锁
+锁的实现基于aqs，常用ReentrantLock ReentrantReadWriteLock 
 
 

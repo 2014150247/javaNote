@@ -3,7 +3,7 @@ ping目标ip时，先查路由表，确定出接口
 如果落在直连接口子网内，此时若为以太网等 多路访问网络 则先查询arp缓存，命中则直接发出，否则在该接口上发arp询问目标ip的mac地址，取得后发出，若为ppp等 点对点网络 ，则直接可以发出；  
 如果查表落在缺省路由上，此时若为以太网等 多路访问网络 则先查询网关arp缓存，命中则直接发出，否则在该接口上发arp询问网关的mac地址，取得后发出，若为ppp等 点对点网络 ，则直接可以发出；  
 若查表未命中，则返回不可达。  
+![](../pic/Image30.png)
 
-
-ping命令基于ICMP协议（ Internet Control Message Protocol），
+ping命令基于ICMP协议（ Internet Control Message Protocol），ICMP又通过IP协议，他是一种无连接，不可靠的数据包协议。
 

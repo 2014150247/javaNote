@@ -85,8 +85,10 @@ get性能最好O(n),最差O（logn）
 
 
 # ConcurrentHashMap：
-jdk6,7时，使用segment，put时锁住segment，get不加，使用volatile保证可见性。
-jdk8，使用node。使用synchronize。利用CAS算法。
+jdk6,7时，使用segment，put时锁住segment，get不加，使用volatile保证可见性。  
+jdk8，使用node。使用synchronize。利用CAS算法。   
+不可以储存null键和null值。  
+ * 因为hashmap可以通过contains方法判断key或value为null是否真的存在。但是如果是并发的，get一个值是null，假如是map中不存在这个key，这是用contains判断，这时又有一个线程写入了null的值，那contains就会true，与真实情况不符。不能储存null是考虑了线程安全的问题，所以一般并发的容器都不能储存null值。   
 不能替代hashtable。虽然迭代时，只锁一部分，性能更好，hashtable锁整个。但hashtable迭代器强一致性，concurrenthashmap弱一致性。
 
 # HashSet:
